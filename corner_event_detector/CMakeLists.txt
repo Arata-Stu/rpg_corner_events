@@ -7,6 +7,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 find_package(catkin_simple REQUIRED)
 catkin_simple()
 
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 list(APPEND SOURCE_FILES
   src/detector.cpp
   src/harris_detector.cpp
